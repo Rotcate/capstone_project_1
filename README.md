@@ -9,6 +9,7 @@ The goal of a BBO is to optimise and fine tune certain parameters without knowin
 This BBO capstone project gives me an opportunity to experiment certain machines learning concepts such as parameter fine tuning and using surrogate and acquisition functions. Additionally, it also offers me a playground to apply different machine learning techniques to gain more insight of the function by making use of the data. 
 
 **Inputs and Outputs**
+
 The model receives different dimensional features with values between 0 and 1 for 8 functions listed below. The return is a single decimal value which does not have a set upper or lower bound.
 
 Function 1 - 2D
