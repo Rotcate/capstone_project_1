@@ -3,7 +3,8 @@
 
 **Motivation**: 
 
-This data set was created to inform the reader about the structure of the data used in the Capstone project. This information is valuable to support the reader in understanding the data structure and limitations around it.
+This data set was created to support sequential evaluations for the black-box optimisations problem. 
+Some initial data sets were provided to support our initial evalution and starting to accumulate weekly data points to discover the maximum value from 8 unknown functions. 
 
 **Composition**: 
 
@@ -18,6 +19,8 @@ The queries (datapoints) were generated each week over a period of 15 weeks. The
 **Preprocessing and uses**: 
 
 I have applied some manual transaformation of the data where the acquisition function was suggesting a value of 1. In this case, to adhere to the guideline format (6 digit float format) I opted to use instead 0.900000. 
+
+This adjustment may slightly influence results near the boundary values, so it should be considered when reviewing the optimisation results.
 
 **Assumptions**
 
