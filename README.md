@@ -71,4 +71,5 @@ documentation/model_card.md
 
 **Datasheet**
 
+documentation/datasheet.md
 
