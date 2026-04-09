@@ -71,5 +71,5 @@ documentation/model_card.md
 
 **Datasheet**
 
-documentation/datasheet.md
+[documentation/datasheet.md](https://github.com/Rotcate/capstone_project_1/blob/main/documentation/datasheet.md)
 
