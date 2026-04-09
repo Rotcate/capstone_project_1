@@ -65,3 +65,10 @@ I am using Gaussian Process with UCB (Upper Confidence Bound) for the acquisitio
 
 My strategy is to first conduct exploration in a structured way (lower, mid, upper bounds). Next step is to discover if there are still areas worth exploring or exploit visible regions.
 
+**Model Card**
+
+documentation/model_card.md
+
+**Datasheet**
+
+
