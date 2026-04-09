@@ -19,8 +19,20 @@ The queries (datapoints) were generated each week over a period of 15 weeks. The
 
 I have applied some manual transaformation of the data where the acquisition function was suggesting a value of 1. In this case, to adhere to the guideline format (6 digit float format) I opted to use instead 0.900000. 
 
+**Assumptions**
+
+The input data is between 0 and 1 and has a 6 digit format float format.
+
+The initial data provided is limited to 10 datapoints per function.
+
+The evaluation budget is limited to 15 datapoints per function.
+
+The evaluation data points are sampled sequentially.
+
+
 **Distribution and maintenance**:
 
-The initial data set can be found in the initial_data folder for start. The weekly data generated for the queries can be found under weekly_data_queries folder. The historical data from previous week is already integrated in the input file for the latest week. In order to access it, use the code methods to read the file in the worksheet and display it.
+The initial data set can be found in the initial_data/ folder for start. The weekly data generated for the queries can be found under weekly_data_queries/ folder. The historical data from previous week is already integrated in the input file for the latest week. In order to access it, use the code methods under code/ will be available to read the file in the worksheet and display its content.
+
 
 The author of this GitHub repositary is the maintainer of this data set.
