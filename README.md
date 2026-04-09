@@ -67,7 +67,7 @@ My strategy is to first conduct exploration in a structured way (lower, mid, upp
 
 **Model Card**
 
-documentation/model_card.md
+[documentation/model_card.md](https://github.com/Rotcate/capstone_project_1/blob/main/documentation/model_card.md)
 
 **Datasheet**
 
