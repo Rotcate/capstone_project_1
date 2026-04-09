@@ -6,7 +6,7 @@ This data set was created to inform the reader about the structure of the data u
 Composition: what does it contain? What is the size and format and are there any gaps?
 The data set contains values between 0 and 1 as datapoints for each function from 1 until 8. Each function has different dimensions. The values have a 6 digit float format. Plase see example below:
 
-Function 5 (5-dimensions): 0.123456 - 0.123456 - 0.123456 - 0.123456
+Function 5 (4-dimensions): 0.123456 - 0.123456 - 0.123456 - 0.123456
 
 Collection process: how were the queries generated? What strategy did you use? Over what time frame?
 The queries (datappints) were generated each week over a period of 15 weeks. They were generated using mainly the Gaussian Process as a surrogate function with an acquisition function (UCB or EI). 
