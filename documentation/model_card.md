@@ -33,19 +33,18 @@ Function 7 (6D): 1.87573521311492763530
 Function 8 (8D): 9.90440809034400082567
 
 
-Assumptions and limitations
+**Assumptions and limitations**
 
 Assumptions: Given each week you are evaluating a new data point and re-use that in your data set, the assumtpion here is that the newly generated points will help the surrogate function to improve its accuracy.
 Constraints: Function evaluation constraint (once a week for 15 weeks)
 Limitations: Curse of dimensionality for high degree functions. It will be difficult to evaluate whether you have covered uniformily the search space given the high dimensionality.
 
 
-**Ethical considerations**
+*Ethical considerations*
 
-Bias risks: There is a potential value bias when chosing the next best point for evaluation. (sometimes you are not aware that you are sampling only from one region in high dimensional space)
-Transparency: All the techniques used throughout the evaluation weeks have been documented. (Acquisition function with kappa values + any pre-set noise assumptions)
-Recommendations: 
-Reproducibility: Additional documentation will be addded containing week-by-week parameter values used for all variables. This can be used for further simulations. Please note, it is not expected to exctly reproduce the exact data point used during evaluations.
+**Bias risks**: There is a potential value bias when chosing the next best point for evaluation. (sometimes you are not aware that you are sampling only from one region in high dimensional space)
+**Transparency**: All the techniques used throughout the evaluation weeks have been documented. Acquisition function with kappa values + any pre-set noise assumptions
+**Reproducibility**: Additional documentation will be addded containing week-by-week parameter values used for all variables. This can be used for further simulations. Please note, it is not expected to exctly reproduce the exact data point used during evaluations.
 
 
 
