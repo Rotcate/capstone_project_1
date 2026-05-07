@@ -5,6 +5,7 @@
 
 This data set was created to support sequential evaluations for a black-box optimisations problem. 
 Some initial data sets were provided to support our initial evalution and starting to accumulate weekly data points to discover the maximum value from 8 unknown functions having different dimensionality. 
+The aim is to obtain a value for each function that represents the maximum.
 
 **Composition**: 
 
@@ -30,9 +31,29 @@ Function 7 - 6D
 
 Function 8 - 8D
 
+
+**Initial data**: 
+
+There were provided 10 initial data sets (inputs and outputs) for each function. The inputs were represented as a list of lists, where each list portrays the dimensional value-datapoints. For example: 
+
+Function 5 (4-dimensions): 0.123456 - 0.123456 - 0.123456 - 0.123456 will be represeted as [[0.123456, 0.123456, 0.123456, 0.123456]]
+
+The output represents a list of values, for example Function 1: [ 1.32267704e-079  1.03307824e-046  7.71087511e-016  3.34177101e-124 -3.60606264e-003 -2.15924904e-054 -2.08909327e-091  2.53500115e-040
+3.60677119e-081  6.22985647e-048]
+
+
 **Collection process**: 
 
-The queries (datapoints) were generated each week over a period of 15 weeks. They were generated using mainly the Gaussian Process as a surrogate function with an acquisition function (UCB - Upper Confidence Bound or EI - Expected Improvement). Each week's generate datapoint was then used in the next week's round to better shape the surrogate function and influence the acquisition's function next best suggested data point.
+The queries (datapoints) were generated each week over a period of 13 weeks. They were generated using mainly the Gaussian Process as a surrogate function with an acquisition function (UCB - Upper Confidence Bound or EI - Expected Improvement). Each week's generate datapoint was then used in the next week's round to better shape the surrogate function and influence the acquisition's function next best suggested data point. 
+The generated datapoints were essentially appended to the already existing lists for each function's input and output.
+The expectation is that the input and output lists for each functions are expected to grow to a length of 23 data points at the end of the optimisation project (10 initial data points + 13 weekly evaluation datapoints).
+
+**Optimisation Stategy**
+
+The first strategy that led me to some strong results was to explore and experiment in the first 5-7 weeks. I have used mainly Gaussian Process as a surrogate function with an acquisition function (UCB - Upper Confidence Bound or EI - Expected Improvement) by tuning with different kappa value. Another strategy I adopted during these first weeks was to pick values from different regions (lower, mid, high). These helped me in collecting data points from different regions to reduce the unknown. I continued to pick recommended next best points based on the previous submissions which provided a maximum value output. A good example is function 8, where from the exploration phase, the lower bound showed potential. I chose to exploit it further in the last 5 evaluations to reach convergence. My result ended in top 3 out of 66 for this function.
+
+The most significant trade-offs I have faced was between applying new methods (for example: neural networks Week 5) and continuing with Gaussian Processes as a surrogate function with acquisition function (UCB or EI). Due to the fact that there were only 13 weeks of evaluation, I have chosen only one evaluation to experiment with neural networks (Week 5) and the final week to apply PCA for dimensionality reduction (Week 13). For all other weeks, I have made a trade-off between exploration or exploitation and the choice of acquisition function. I have focused in the first few weeks to only explore and try out different values of kappa. (Picking data points from beginning, mid, top regions) The short-term strategy which I have applied it towards the last weeks of the capstone project was to reuse the acquisition function and slightly adjusting kappa value for which it has been previously identified a maximum output.
+
 
 **Preprocessing and uses**: 
 
@@ -40,15 +61,33 @@ I have applied some manual transaformation of the data where the acquisition fun
 
 This adjustment may slightly influence results near the boundary values, so it should be considered when reviewing the optimisation results.
 
+Note: For Week 13, I have applied a standard Scaler to the data before applying PCA.
+
 **Assumptions**
 
 The input data is between 0 and 1 and has a 6 digit format float format.
 
 The initial data provided is limited to 10 datapoints per function.
 
-The evaluation budget is limited to 15 datapoints per function.
+The evaluation budget is limited to 13 datapoints per function.
 
 The evaluation data points are sampled sequentially.
+
+**Performance and results**
+
+A leaderboard was announced at the end of the 13 weeks evaluations to see the rank of who has managed to get closer to the maximum value. More details are included, such as my inputs and outputs that were the closest to the maximum together to which position they took among the 66 participants.
+
+| Function Number | Rank out of 66 participants | Maximum value reached | Input datapoints| Week number when maximum value was reached | Hyperparameters used |
+| ----------- | ----------- | ------------| ---------| -----------| --------|
+| Function 1  | 40 | 3.68899881390221E-12 | | Week 12 | GP + UCB (iterations =10)  kappa = 0.2|
+| Function 2  | 7  | 0.777000459903961 | | Week 13 | GP + UCB (iterations =10) kappa = 0.1 |
+| Function 3  | 32 | -0.0156789179946715 |  | Week 4 | GP + UCB (iterations =10) kappa = 1 |
+| Function 4  | 26 | 0.466545229880471 |  | Week 3 | GP + UCB (iterations =10) kappa = 2 |
+| Function 5  | 43 | 3378.23128317872|  | Week 6| GP + EI (iterations =10 ) kappa = 0.05 |
+| Function 6  | 28 | -0.279147552728751 |  | Week 6 | GP + EI (iterations =10 ) kappa = 0.05 |
+| Function 7  | 8  | 3.02915681360642|  | Week 11 | GP + UCB (iterations =10) kappa = 0.5 |
+| Function 8  | 3  | 9.9959433020615 |  | Week 12 | GP + UCB (iterations =10 ) kappa = 0.2 |
+
 
 
 **Distribution and maintenance**:
