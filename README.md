@@ -1,6 +1,6 @@
 # Capstone Project
 
-## OVERWIEW
+## OVERVIEW
 
 Black-Box-Optimisation BBO capstone project constitutes an optimisation problem where you evaluate an unknown function. There is no context about the function’s shape, gradients etc.
 
