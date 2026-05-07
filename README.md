@@ -1,6 +1,6 @@
 # Capstone Project
 
-**Project Overview**
+## NON-TECHNICAL EXPLANATION OF YOUR PROJECT
 
 Black-Box-Optimisation BBO capstone project constitutes an optimisation problem where you evaluate an unknown function. There is no context about the function’s shape, gradients etc.
 
@@ -8,7 +8,7 @@ The goal of a BBO is to optimise and fine tune certain parameters without knowin
 
 This BBO capstone project gives me an opportunity to experiment certain machines learning concepts such as parameter fine tuning and using surrogate and acquisition functions. Additionally, it also offers me a playground to apply different machine learning techniques to gain more insight of the function by making use of the data. 
 
-**Inputs and Outputs**
+## DATA
 
 The model receives different dimensional features with values between 0 and 1 for 8 functions listed below. The return is a single decimal value which does not have a set upper or lower bound.
 
@@ -38,7 +38,7 @@ The target is to predict the next best data point which will give me the maximum
 The goal is to maximise the functions. I need to consider high dimensionality, the limited number of queries (only once per week) and the unknown function structure.
 Worth noting that 10 input and output data points were given at the beginning of the BBO as a starting point.
 
-**Technical Approach**
+## MODEL 
 
 My strategy for the first three query submissions has been on exploration. I am using a Gaussian Process with UCB for which I have used different values of kappa to target different exploration areas.
 Week 1: Exploration for the Lower Bound - all functions had kappa set to 8.0
@@ -65,6 +65,21 @@ I am using Gaussian Process with UCB (Upper Confidence Bound) for the acquisitio
 
 My strategy is to first conduct exploration in a structured way (lower, mid, upper bounds). Next step is to discover if there are still areas worth exploring or exploit visible regions.
 
+## HYPERPARAMETER OPTIMSATION
+Description of which hyperparameters you have and how you chose to optimise them. 
+
+
+
+## RESULTS
+
+The black-box optimisation project was conducted as part of the Imperial College London - Machine Learning and Artificial Intelligence course. A leaderboard was announced at the end of the 13 weeks evaluations to see the rank of who has managed to get close to the maximum value. 
+
+| Function Number | Rank out of 66 participants | Maximum value reached | Week number when maximum value was reached | Hyperparameters used |
+| ----------- | ----------- | ------------| -----------| --------|
+| Function 1  | 7   | 3.68899881390221E-12| Week 12 | GP + UCB (iterations =10)  kappa = 0.2|
+| Function 2  | 32  | 0.777000459903961 | Week 13 | GP + UCB (iterations =10) kappa = 0.1 |
+
+
 **Model Card**
 
 [documentation/model_card.md](https://github.com/Rotcate/capstone_project_1/blob/main/documentation/model_card.md)
@@ -72,4 +87,20 @@ My strategy is to first conduct exploration in a structured way (lower, mid, upp
 **Datasheet**
 
 [documentation/datasheet.md](https://github.com/Rotcate/capstone_project_1/blob/main/documentation/datasheet.md)
+
+
+**Source Code**
+
+[source_code/BBO.ipynb](https://github.com/Rotcate/capstone_project_1/blob/main/source_code/BBO.ipynb)
+
+**Initial Provided Data**
+
+[initial_data](https://github.com/Rotcate/capstone_project_1/tree/main/initial_data)
+
+**Weekly Evaluations**
+
+[weekly_data_queries](https://github.com/Rotcate/capstone_project_1/tree/main/weekly_data_queries)
+
+
+
 
