@@ -52,7 +52,9 @@ The expectation is that the input and output lists for each functions are expect
 
 The first strategy that led me to some strong results was to explore and experiment in the first 5-7 weeks. I have used mainly Gaussian Process as a surrogate function with an acquisition function (UCB - Upper Confidence Bound or EI - Expected Improvement) by tuning with different kappa value. Another strategy I adopted during these first weeks was to pick values from different regions (lower, mid, high). These helped me in collecting data points from different regions to reduce the unknown. I continued to pick recommended next best points based on the previous submissions which provided a maximum value output. A good example is function 8, where from the exploration phase, the lower bound showed potential. I chose to exploit it further in the last 5 evaluations to reach convergence. My result ended in top 3 out of 66 for this function.
 
-The most significant trade-offs I have faced was between applying new methods (for example: neural networks Week 5) and continuing with Gaussian Processes as a surrogate function with acquisition function (UCB or EI). Due to the fact that there were only 13 weeks of evaluation, I have chosen only one evaluation to experiment with neural networks (Week 5) and the final week to apply PCA for dimensionality reduction (Week 13). For all other weeks, I have made a trade-off between exploration or exploitation and the choice of acquisition function. I have focused in the first few weeks to only explore and try out different values of kappa. (Picking data points from beginning, mid, top regions) The short-term strategy which I have applied it towards the last weeks of the capstone project was to reuse the acquisition function and slightly adjusting kappa value for which it has been previously identified a maximum output.
+The most significant trade-offs I have faced was between applying new methods (for example: neural networks Week 5) and continuing with Gaussian Processes as a surrogate function with acquisition function (UCB or EI). Due to the fact that there were only 13 weeks of evaluation, I have chosen only one evaluation to experiment with neural networks (Week 5) and the final week to apply PCA for dimensionality reduction (Week 13). For all other weeks, I have made a trade-off between exploration or exploitation and the choice of acquisition function. I have focused in the first few weeks to only explore and try out different values of kappa. (Picking data points from beginning, mid, top regions) The short-term strategy which I have applied it towards the last weeks of the capstone project was to reuse the acquisition function and slightly adjusting kappa value for which it has been previously identified a maximum output. 
+
+Additionally, I have applied PCA for dimensionality reduction during Week 13 to functions 3 until 8. The best consideration here is to use PCA to reduce dimensionality, so plotting (visualisation) will become easier in 2D.
 
 
 **Preprocessing and uses**
@@ -91,9 +93,12 @@ A leaderboard was announced at the end of the 13 weeks evaluations to see the ra
 
 **Ethical, practical and general considerations**
 
-The black-box optimisation tasks related to the real-world applications by not knowing the insight of a problem, or it is very expensive to evaluate or has a high complexity. A good example is using fine tune of hyperparamter in financial modelling and drug discovery. 
+The black-box optimisation tasks relates to the real-world applications, from a perpsective of not knowing the insight of a problem, or showing an expensive evaluation or high complexity. As a real-world application, let's take financial modelling and drug discovery. These can be conducted by fine tuning hyperparameters for these models. 
 
-The limitations of synthetic nature of a function is that it cannot fully capture noise or changing conditions which are often experienced in the real-world.
+There are limitations of the synthetic nature of these functions. The main one being, the inability to fully capture noise or changing conditions which are often experienced in the real-world.
+
+There is also a consideration around the risk in overfitting the optimisation strategy rather than developing one which will generalise on new functions or problems.
+Another note is around the limited evaluation budget. There is a risk in reaching a local optima, instead of obtaining the global maximum value. It can be observed that this has been the case for function 5.
 
 
 **Distribution and maintenance**
