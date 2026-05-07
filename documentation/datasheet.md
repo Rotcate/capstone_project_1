@@ -89,7 +89,7 @@ A leaderboard was announced at the end of the 13 weeks evaluations to see the ra
 | Function 8  | 3  | 9.9959433020615 | [0.134207, 0.173346, 0.133126, 0.150276, 0.757313, 0.500828, 0.208864, 0.572960] | Week 12 | GP + UCB (iterations =10 ) kappa = 0.2 |
 
 
-** Ethical, practical and general considerations**
+**Ethical, practical and general considerations**
 
 The black-box optimisation tasks related to the real-world applications by not knowing the insight of a problem, or it is very expensive to evaluate or has a high complexity. A good example is using fine tune of hyperparamter in financial modelling and drug discovery. 
 
