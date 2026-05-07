@@ -79,14 +79,14 @@ A leaderboard was announced at the end of the 13 weeks evaluations to see the ra
 
 | Function Number | Rank out of 66 participants | Maximum value reached | Input datapoints| Week number when maximum value was reached | Hyperparameters used |
 | ----------- | ----------- | ------------| ---------| -----------| --------|
-| Function 1  | 40 | 3.68899881390221E-12 | | Week 12 | GP + UCB (iterations =10)  kappa = 0.2|
-| Function 2  | 7  | 0.777000459903961 | | Week 13 | GP + UCB (iterations =10) kappa = 0.1 |
-| Function 3  | 32 | -0.0156789179946715 |  | Week 4 | GP + UCB (iterations =10) kappa = 1 |
-| Function 4  | 26 | 0.466545229880471 |  | Week 3 | GP + UCB (iterations =10) kappa = 2 |
-| Function 5  | 43 | 3378.23128317872|  | Week 6| GP + EI (iterations =10 ) kappa = 0.05 |
-| Function 6  | 28 | -0.279147552728751 |  | Week 6 | GP + EI (iterations =10 ) kappa = 0.05 |
-| Function 7  | 8  | 3.02915681360642|  | Week 11 | GP + UCB (iterations =10) kappa = 0.5 |
-| Function 8  | 3  | 9.9959433020615 |  | Week 12 | GP + UCB (iterations =10 ) kappa = 0.2 |
+| Function 1  | 40 | 3.68899881390221E-12 | [0.339981, 0.323487]| Week 12 | GP + UCB (iterations =10)  kappa = 0.2|
+| Function 2  | 7  | 0.777000459903961 | [0.510208, 0.529779]| Week 13 | GP + UCB (iterations =10) kappa = 0.1 |
+| Function 3  | 32 | -0.0156789179946715 | [0.418978, 0.452988, 0.516531] | Week 4 | GP + UCB (iterations =10) kappa = 1 |
+| Function 4  | 26 | 0.466545229880471 | [0.405673, 0.390640, 0.346566, 0.428138] | Week 3 | GP + UCB (iterations =10) kappa = 2 |
+| Function 5  | 43 | 3378.23128317872| [0.988643, 0.690716, 0.985391, 0.856409] | Week 6| GP + EI (iterations =10 ) kappa = 0.05 |
+| Function 6  | 28 | -0.279147552728751 | [0.445702, 0.249091, 0.570676, 0.789337, 0.143917] | Week 6 | GP + EI (iterations =10 ) kappa = 0.05 |
+| Function 7  | 8  | 3.02915681360642| [0.097177, 0.221951, 0.410126, 0.256124, 0.300504, 0.618146] | Week 11 | GP + UCB (iterations =10) kappa = 0.5 |
+| Function 8  | 3  | 9.9959433020615 | [0.134207, 0.173346, 0.133126, 0.150276, 0.757313, 0.500828, 0.208864, 0.572960] | Week 12 | GP + UCB (iterations =10 ) kappa = 0.2 |
 
 
 
