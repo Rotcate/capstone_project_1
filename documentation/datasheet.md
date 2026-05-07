@@ -1,13 +1,13 @@
 
 # DataSheet
 
-**Motivation**: 
+**Motivation**
 
 This data set was created to support sequential evaluations for a black-box optimisations problem. 
 Some initial data sets were provided to support our initial evalution and starting to accumulate weekly data points to discover the maximum value from 8 unknown functions having different dimensionality. 
 The aim is to obtain a value for each function that represents the maximum.
 
-**Composition**: 
+**Composition**
 
 The data set contains values between 0 and 1 as datapoints for each function from 1 until 8. Each function has different dimensions. The values have a 6 digit float format. Plase see example below:
 
@@ -32,7 +32,7 @@ Function 7 - 6D
 Function 8 - 8D
 
 
-**Initial data**: 
+**Initial data**
 
 There were provided 10 initial data sets (inputs and outputs) for each function. The inputs were represented as a list of lists, where each list portrays the dimensional value-datapoints. For example: 
 
@@ -42,7 +42,7 @@ The output represents a list of values, for example Function 1: [ 1.32267704e-07
 3.60677119e-081  6.22985647e-048]
 
 
-**Collection process**: 
+**Collection process**
 
 The queries (datapoints) were generated each week over a period of 13 weeks. They were generated using mainly the Gaussian Process as a surrogate function with an acquisition function (UCB - Upper Confidence Bound or EI - Expected Improvement). Each week's generate datapoint was then used in the next week's round to better shape the surrogate function and influence the acquisition's function next best suggested data point. 
 The generated datapoints were essentially appended to the already existing lists for each function's input and output.
@@ -55,7 +55,7 @@ The first strategy that led me to some strong results was to explore and experim
 The most significant trade-offs I have faced was between applying new methods (for example: neural networks Week 5) and continuing with Gaussian Processes as a surrogate function with acquisition function (UCB or EI). Due to the fact that there were only 13 weeks of evaluation, I have chosen only one evaluation to experiment with neural networks (Week 5) and the final week to apply PCA for dimensionality reduction (Week 13). For all other weeks, I have made a trade-off between exploration or exploitation and the choice of acquisition function. I have focused in the first few weeks to only explore and try out different values of kappa. (Picking data points from beginning, mid, top regions) The short-term strategy which I have applied it towards the last weeks of the capstone project was to reuse the acquisition function and slightly adjusting kappa value for which it has been previously identified a maximum output.
 
 
-**Preprocessing and uses**: 
+**Preprocessing and uses**
 
 I have applied some manual transaformation of the data where the acquisition function was suggesting a value of 1. In this case, to adhere to the guideline format (6 digit float format) I opted to use instead 0.900000. 
 
@@ -89,8 +89,14 @@ A leaderboard was announced at the end of the 13 weeks evaluations to see the ra
 | Function 8  | 3  | 9.9959433020615 | [0.134207, 0.173346, 0.133126, 0.150276, 0.757313, 0.500828, 0.208864, 0.572960] | Week 12 | GP + UCB (iterations =10 ) kappa = 0.2 |
 
 
+** Ethical, practical and general considerations**
 
-**Distribution and maintenance**:
+The black-box optimisation tasks related to the real-world applications by not knowing the insight of a problem, or it is very expensive to evaluate or has a high complexity. A good example is using fine tune of hyperparamter in financial modelling and drug discovery. 
+
+The limitations of synthetic nature of a function is that it cannot fully capture noise or changing conditions which are often experienced in the real-world.
+
+
+**Distribution and maintenance**
 
 The initial data set can be found in the initial_data/ folder for start. The weekly data generated for the queries can be found under weekly_data_queries/ folder. The historical data from previous week is already integrated in the input file for the latest week. In order to access it, use the code methods under code/ will be available to read the file in the worksheet and display its content.
 
