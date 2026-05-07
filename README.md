@@ -66,8 +66,21 @@ I am using Gaussian Process with UCB (Upper Confidence Bound) for the acquisitio
 My strategy is to first conduct exploration in a structured way (lower, mid, upper bounds). Next step is to discover if there are still areas worth exploring or exploit visible regions.
 
 ## HYPERPARAMETER OPTIMSATION
-Description of which hyperparameters you have and how you chose to optimise them. 
 
+The hyperparameters which have been optimised are:
+- the kappa value for the acquisition function (UCB or EI);
+- number of iterations applied in the bayesian optimisation (Gaussian Process was used as surrogate function)
+
+All functions followed the same settings for the following weeks:
+
+| Week Number| Hyperparameters |
+| -----------| --------------- |
+| Week 1 | GP + UCB (iterations = 10) kappa = 8.0 |
+| Week 2 | GP + UCB (iterations = 10) kappa = 20.0 |
+| Week 5 | Neural Networks (kappa 2.0 - iterations 10) | 
+| Week 6 | GP + EI (iterations = 10) kappa = 0.05 |
+| Week 7 | GP + EI (iterations = 15) kappa = 5.0 |
+| Week 8| GP + EI (iterations = 15) kappa = 10.0 |
 
 
 ## RESULTS
@@ -76,9 +89,14 @@ The black-box optimisation project was conducted as part of the Imperial College
 
 | Function Number | Rank out of 66 participants | Maximum value reached | Week number when maximum value was reached | Hyperparameters used |
 | ----------- | ----------- | ------------| -----------| --------|
-| Function 1  | 7   | 3.68899881390221E-12| Week 12 | GP + UCB (iterations =10)  kappa = 0.2|
-| Function 2  | 32  | 0.777000459903961 | Week 13 | GP + UCB (iterations =10) kappa = 0.1 |
-
+| Function 1  | 40 | 3.68899881390221E-12| Week 12 | GP + UCB (iterations =10)  kappa = 0.2|
+| Function 2  | 7  | 0.777000459903961 | Week 13 | GP + UCB (iterations =10) kappa = 0.1 |
+| Function 3  | 32 | -0.0156789179946715 | Week 4 | GP + UCB (iterations =10) kappa = 1 |
+| Function 4  | 26 | 0.466545229880471 | Week 3 | GP + UCB (iterations =10) kappa = 2 |
+| Function 5  | 43 | 3378.23128317872 | Week 6| GP + EI (iterations =10 ) kappa = 0.05 |
+| Function 6  | 28 | -0.279147552728751 | Week 6 | GP + EI (iterations =10 ) kappa = 0.05 |
+| Function 7  | 8  | 3.02915681360642 | Week 11 | GP + UCB (iterations =10) kappa = 0.5 |
+| Function 8  | 3  | 9.9959433020615 | Week 12 | GP + UCB (iterations =10 ) kappa = 0.2 |
 
 **Model Card**
 
