@@ -3,14 +3,32 @@
 
 **Motivation**: 
 
-This data set was created to support sequential evaluations for the black-box optimisations problem. 
-Some initial data sets were provided to support our initial evalution and starting to accumulate weekly data points to discover the maximum value from 8 unknown functions. 
+This data set was created to support sequential evaluations for a black-box optimisations problem. 
+Some initial data sets were provided to support our initial evalution and starting to accumulate weekly data points to discover the maximum value from 8 unknown functions having different dimensionality. 
 
 **Composition**: 
 
 The data set contains values between 0 and 1 as datapoints for each function from 1 until 8. Each function has different dimensions. The values have a 6 digit float format. Plase see example below:
 
 Function 5 (4-dimensions): 0.123456 - 0.123456 - 0.123456 - 0.123456
+
+The full list of function dimensions can be found below:
+
+Function 1 - 2D
+
+Function 2 - 2D
+
+Function 3 - 3D
+
+Function 4 - 4D
+
+Function 5 - 4D
+
+Function 6 - 5D
+
+Function 7 - 6D
+
+Function 8 - 8D
 
 **Collection process**: 
 
