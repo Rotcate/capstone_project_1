@@ -1,12 +1,15 @@
 # Capstone Project
 
-## NON-TECHNICAL EXPLANATION OF YOUR PROJECT
+## OVERWIEW
 
 Black-Box-Optimisation BBO capstone project constitutes an optimisation problem where you evaluate an unknown function. There is no context about the function’s shape, gradients etc.
 
 The goal of a BBO is to optimise and fine tune certain parameters without knowing the internal structures. This mimics the real-world scenarios where you do not have access to the internal workings of a system.
 
-This BBO capstone project gives me an opportunity to experiment certain machines learning concepts such as parameter fine tuning and using surrogate and acquisition functions. Additionally, it also offers me a playground to apply different machine learning techniques to gain more insight of the function by making use of the data. 
+This BBO capstone project gives me an opportunity to experiment certain machines learning concepts such as hyperparameter fine tuning and using surrogate and acquisition functions. Additionally, it also offers me a playground to apply different machine learning techniques to gain more insight of the function by making use of the data. 
+
+A surrogate function such as Gaussian Process (GP) acts as a build out simulation of the real function. An acquisition function suggest the bext next point that will maximises your output based on the data seen so far. 
+Please find below the Model and Hyperparameter tuning for additional information.
 
 ## DATA
 
@@ -40,36 +43,16 @@ Worth noting that 10 input and output data points were given at the beginning of
 
 ## MODEL 
 
-My strategy for the first three query submissions has been on exploration. I am using a Gaussian Process with UCB for which I have used different values of kappa to target different exploration areas.
-Week 1: Exploration for the Lower Bound - all functions had kappa set to 8.0
-Week 2: Exploration for the Upper Bound - all functions had kappa set to 20.0
-Week 3: Exploration for the Mid Area - I had to adjust kappa for each function to obtain some mid area points from the acquisition function:
+I have chosen to use Gaussian Process (GP) as a surrogate model for most of my evaluations. The only exception was in Week 5, where I have used Neural Networks acting as a surrogate function. For GP I have used RBF (0.3 moderate sensitivity) as a kernel with alpha = 1e-6 for low noise assumption. I have alternated between the use of Upper Confidence Bound (UCB) and expected improvement (EI) as acquisition funcitons which helped suggest which are the best next points to reach a maximum output in the evaluation. The UCB type of acquisition function helped me have a better control over exploration. The EI type of acquisition function is better for faster convergence. 
 
-	Function 1- kappa 10.0
-	
-	Function 2- kappa 12.0
-	
-	Function 3 - kappa 2.0
-	
-	Function 4 - kappa 2.0
-	
-	Function 5 - kappa 2.0
-	
-	Function 6 - kappa 4.0
-	
-	Function 7 - kappa 4.0
-	
-	Function 8 - kappa 3.0
-
-I am using Gaussian Process with UCB (Upper Confidence Bound) for the acquisition function. I am considering using SVMs and regressions for detecting the high-interest regions which I can conduct more exploitation. 
-
-My strategy is to first conduct exploration in a structured way (lower, mid, upper bounds). Next step is to discover if there are still areas worth exploring or exploit visible regions.
+The strategy was to first conduct exploration in a structured way (lower, mid, upper bounds), followed by exploiting visible high-potential regions for discvering the maximum.
 
 ## HYPERPARAMETER OPTIMSATION
 
 The hyperparameters which have been optimised are:
 - the kappa value for the acquisition function (UCB or EI);
 - number of iterations applied in the bayesian optimisation (Gaussian Process was used as surrogate function)
+- The surrogate function used;
 
 **All functions followed the same settings for the following weeks:**
 
@@ -187,7 +170,7 @@ The hyperparameters which have been optimised are:
 
 ## RESULTS
 
-The black-box optimisation project was conducted as part of the Imperial College London - Machine Learning and Artificial Intelligence course. A leaderboard was announced at the end of the 13 weeks evaluations to see the rank of who has managed to get close to the maximum value. 
+The black-box optimisation project was conducted as part of the Imperial College London - Machine Learning and Artificial Intelligence certificate course. A leaderboard was announced at the end of the 13 weeks evaluations to see the rank of who has managed to get closer to the maximum value. 
 
 | Function Number | Rank out of 66 participants | Maximum value reached | Week number when maximum value was reached | Hyperparameters used |
 | ----------- | ----------- | ------------| -----------| --------|
