@@ -71,7 +71,7 @@ The hyperparameters which have been optimised are:
 - the kappa value for the acquisition function (UCB or EI);
 - number of iterations applied in the bayesian optimisation (Gaussian Process was used as surrogate function)
 
-All functions followed the same settings for the following weeks:
+**All functions followed the same settings for the following weeks:**
 
 | Week Number| Hyperparameters |
 | -----------| --------------- |
@@ -81,6 +81,108 @@ All functions followed the same settings for the following weeks:
 | Week 6 | GP + EI (iterations = 10) kappa = 0.05 |
 | Week 7 | GP + EI (iterations = 15) kappa = 5.0 |
 | Week 8| GP + EI (iterations = 15) kappa = 10.0 |
+
+**Function 1**
+
+| Week Number| Hyperparameters |
+| -----------| --------------- |
+| Week 3 | GP + UCB (iterations = 10) kappa = 10.0 |
+| Week 4 | GP + UCB (iterations = 10) kappa = 9.0 |
+| Week 9 | GP + UCB (iterations = 10) kappa = 9.5 | 
+| Week 10 | GP + UCB (iterations = 10) kappa = 5.0 |
+| Week 11 | GP + UCB (iterations = 10) kappa = 6.0 |
+| Week 12| GP + UCB (iterations = 10) kappa = 0.2 |
+| Week 13| GP + UCB (iterations = 10) kappa = 0.1 |
+
+
+**Function 2**
+
+| Week Number| Hyperparameters |
+| -----------| --------------- |
+| Week 3 | GP + UCB (iterations = 10) kappa = 12.0 |
+| Week 4 | GP + UCB (iterations = 10) kappa = 2.0 |
+| Week 9 | GP + EI (iterations = 15) kappa = 4.5 | 
+| Week 10 | GP + EI (iterations = 10) kappa = 3.0 |
+| Week 11 | GP + EI (iterations = 10) kappa = 4.0 |
+| Week 12| GP + UCB (iterations = 10) kappa = 0.2 |
+| Week 13| GP + UCB (iterations = 10) kappa = 0.1 |
+
+
+**Function 3**
+
+| Week Number| Hyperparameters |
+| -----------| --------------- |
+| Week 3 | GP + UCB (iterations = 10) kappa = 12.0 |
+| Week 4 | GP + UCB (iterations = 10) kappa = 1.0 |
+| Week 9 | GP + UCB (iterations = 15) kappa = 0.5  | 
+| Week 10 | GP + UCB (iterations = 10) kappa = 1.0 |
+| Week 11 | GP + UCB (iterations = 10) kappa = 2.0 |
+| Week 12| GP + EI (iterations = 10) kappa = 0.2 |
+| Week 13| GP + UCB + PCA (iterations = 10) kappa = 0.1 |
+
+**Function 4**
+
+| Week Number| Hyperparameters |
+| -----------| --------------- |
+| Week 3 | GP + UCB (iterations = 10) kappa = 2.0 |
+| Week 4 | GP + UCB (iterations = 10) kappa = 1.0 |
+| Week 9 | GP + UCB (iterations = 15) kappa = 0.5 | 
+| Week 10 | GP + UCB (iterations = 10) kappa = 4.0  |
+| Week 11 | GP + EI (iterations = 10) kappa = 4.0 |
+| Week 12| GP + EI (iterations = 10) kappa = 0.2 |
+| Week 13| GP + UCB + PCA (iterations = 10) kappa = 0.1 |
+
+
+**Function 5**
+
+| Week Number| Hyperparameters |
+| -----------| --------------- |
+| Week 3 |  |
+| Week 4 |  |
+| Week 9 |  | 
+| Week 10 |  |
+| Week 11 |  |
+| Week 12| |
+| Week 13| |
+
+
+**Function 6**
+
+| Week Number| Hyperparameters |
+| -----------| --------------- |
+| Week 3 |  |
+| Week 4 |  |
+| Week 9 |  | 
+| Week 10 |  |
+| Week 11 |  |
+| Week 12| |
+| Week 13| |
+
+
+**Function 7**
+
+| Week Number| Hyperparameters |
+| -----------| --------------- |
+| Week 3 |  |
+| Week 4 |  |
+| Week 9 |  | 
+| Week 10 |  |
+| Week 11 |  |
+| Week 12| |
+| Week 13| |
+
+
+**Function 8**
+
+| Week Number| Hyperparameters |
+| -----------| --------------- |
+| Week 3 |  |
+| Week 4 |  |
+| Week 9 |  | 
+| Week 10 |  |
+| Week 11 |  |
+| Week 12| |
+| Week 13| |
 
 
 ## RESULTS
